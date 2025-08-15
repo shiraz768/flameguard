@@ -1,0 +1,236 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0f0f0f;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container,
+.login-container,
+.register-container {
+    border-radius: 12px;
+    padding: 2.5rem;
+    animation: fadeIn 0.8s ease-in-out;
+    max-width: calc(100% - 2rem);
+}
+
+.container {
+    max-width: 500px;
+    background-color: #1a1a1a;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.2);
+}
+
+.login-container {
+    background-color: #1a1a1a;
+    width: 360px;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.2);
+}
+
+.register-container {
+    background-color: #1a1a1a;
+    width: 380px;
+    box-shadow: 0 0 25px rgba(151, 255, 77, 0.2); /* Green glow */
+}
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.container h2,
+.login-container h2 {
+    color: #ff4d4d;
+}
+
+.register-container h2 {
+    color: #97ff4d;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label,
+.input-group label {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+}
+
+label i,
+.input-group i,
+.footer a i {
+    margin-right: 6px;
+    color: #ff4d4d;
+}
+
+.register-container label i,
+.register-container h2 i,
+.register-container .footer a i {
+    color: #97ff4d;
+}
+
+input,
+.input-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background-color: #0f0f0f;
+    color: #fff;
+    font-size: 1rem;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+.input-group input:focus {
+    outline: none;
+    border-color: #ff4d4d;
+    box-shadow: 0 0 6px #ff4d4d;
+}
+
+.register-container input:focus {
+    border-color: #97ff4d;
+    box-shadow: 0 0 6px #97ff4d;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.9rem;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s ease, transform 0.05s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     background-color: rgba(183, 10, 10, 0.777);
+     color: white;
+    gap: 8px;
+}
+.btn:hover{
+  background-color: rgba(255, 2, 2, 0.229);
+  color: white;
+}
+
+.btn-primary {
+    background-color: #ff4d4d;
+    color: #000;
+}
+.btn-primary:hover {
+    background-color: #e03b3b;
+}
+
+.register-container .btn-primary {
+    background-color: #97ff4d;
+    color: #000;
+}
+.register-container .btn-primary:hover {
+    background-color: #ace03b;
+}
+
+.btn-secondary {
+    background-color: #ff4d4d;
+    color: #fff;
+}
+.btn-secondary:hover {
+    background-color: #e03b3b;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+#logout{
+    position: absolute;
+}
+.logout-btn {
+    position: fixed;       /* fixed to viewport */
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    background-color: transparent;
+    border: 1px solid #ff4d4d;
+    color: #ff4d4d;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+    z-index: 9999;
+
+    width: auto;           /* make width adjust to content */
+    min-width: 0;          /* override Bootstrap min-width if any */
+}
+a {
+    text-decoration: none;
+}
+.logout-btn:hover {
+    background-color: #ff4d4d;
+    color: #fff;
+}
+
+
+.footer {
+    margin-top: 14px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+.footer a {
+    color: #ff4d4d;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+.alert {
+    background-color: #330000;
+    color: #ff4d4d;
+    padding: 0.8rem;
+    border-radius: 6px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+#resultBox {
+    display: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+}
+
+
+.progress {
+    background-color: #333;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

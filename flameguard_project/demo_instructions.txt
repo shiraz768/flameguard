@@ -1,0 +1,23 @@
+
+Demo instructions:
+
+1. Start the Flask server:
+   python app.py
+
+2. In browser, go to http://127.0.0.1:5000
+
+3. Enter values for:
+   FFMC, DMC, DC, ISI, temp, RH, wind
+
+   Example (sample values):
+   FFMC: 86.2
+   DMC: 26.2
+   DC: 94.3
+   ISI: 5.1
+   temp: 19.3
+   RH: 35
+   wind: 4.0
+
+4. Click Predict, read result.
+
+To show the real model, run `python train_model.py` after placing the real `forestfires.csv` in the project root.
